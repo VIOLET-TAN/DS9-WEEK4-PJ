@@ -8,7 +8,7 @@ library(RCurl)
 library(randomForest)
 
 # LOADING TXT DATA TABLE
-kfweather <- read.delim(file = "C:/Users/VioletT/OneDrive/COURSERA/DEVELOPING DATA PRODUCTS/WEEK4/DS9-WK4-PJ/kfweather.txt", 
+kfweather <- read.delim(file = "kfweather.txt", 
                         header = TRUE, sep = ",", stringsAsFactors = TRUE)
 # BUILDING MODEL
 model <- randomForest(go ~ ., data = kfweather, ntree = 500, mtry = 4, importance = TRUE)
@@ -41,27 +41,3 @@ ui <- fluidPage(theme = shinytheme("simplex"),
 )
 #
 
-library(shiny)
-
-# Define UI for application that draws a histogram
-shinyUI(fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotOutput("distPlot")
-        )
-    )
-))

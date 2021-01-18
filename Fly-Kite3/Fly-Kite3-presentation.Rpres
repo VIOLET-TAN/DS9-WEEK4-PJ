@@ -36,6 +36,7 @@ output:      Prediction: yes  no
 4th Slide - LINKS
 ========================================================
 For App:
+https://vty2021london.shinyapps.io/Fly-Kite3/
 
 For code file:
 https://github.com/VIOLET-TAN/DS9-WEEK4-PJ.git
